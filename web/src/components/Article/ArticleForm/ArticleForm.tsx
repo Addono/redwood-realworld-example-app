@@ -12,23 +12,6 @@ import {
 
 const ArticleForm = (props) => {
   const onSubmit = (data) => {
-
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
     props.onSave(data, props?.article?.id)
   }
 
@@ -41,7 +24,7 @@ const ArticleForm = (props) => {
           titleClassName="rw-form-error-title"
           listClassName="rw-form-error-list"
         />
-      
+
         <Label
           name="slug"
           className="rw-label"
@@ -49,7 +32,7 @@ const ArticleForm = (props) => {
         >
           Slug
         </Label>
-        
+
           <TextField
             name="slug"
             defaultValue={props.article?.slug}
@@ -57,7 +40,7 @@ const ArticleForm = (props) => {
             errorClassName="rw-input rw-input-error"
             validation={{ required: true }}
           />
-        
+
 
         <FieldError name="slug" className="rw-field-error" />
 
@@ -68,7 +51,7 @@ const ArticleForm = (props) => {
         >
           Title
         </Label>
-        
+
           <TextField
             name="title"
             defaultValue={props.article?.title}
@@ -76,7 +59,7 @@ const ArticleForm = (props) => {
             errorClassName="rw-input rw-input-error"
             validation={{ required: true }}
           />
-        
+
 
         <FieldError name="title" className="rw-field-error" />
 
@@ -87,7 +70,7 @@ const ArticleForm = (props) => {
         >
           Description
         </Label>
-        
+
           <TextField
             name="description"
             defaultValue={props.article?.description}
@@ -95,7 +78,7 @@ const ArticleForm = (props) => {
             errorClassName="rw-input rw-input-error"
             validation={{ required: true }}
           />
-        
+
 
         <FieldError name="description" className="rw-field-error" />
 
@@ -106,7 +89,7 @@ const ArticleForm = (props) => {
         >
           Body
         </Label>
-        
+
           <TextField
             name="body"
             defaultValue={props.article?.body}
@@ -114,7 +97,7 @@ const ArticleForm = (props) => {
             errorClassName="rw-input rw-input-error"
             validation={{ required: true }}
           />
-        
+
 
         <FieldError name="body" className="rw-field-error" />
 
@@ -125,7 +108,7 @@ const ArticleForm = (props) => {
         >
           Author id
         </Label>
-        
+
           <NumberField
             name="authorId"
             defaultValue={props.article?.authorId}
@@ -133,7 +116,7 @@ const ArticleForm = (props) => {
             errorClassName="rw-input rw-input-error"
             validation={{ required: true }}
           />
-        
+
 
         <FieldError name="authorId" className="rw-field-error" />
 

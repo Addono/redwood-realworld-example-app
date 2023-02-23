@@ -97,6 +97,18 @@ const PostEditor = ({ post }) => {
 
                 <fieldset className="form-group">
                   <TextField
+                    name="slug"
+                    validation={{ required: true, pattern: /[A-Za-z\-]+/ }}
+                    errorClassName="form-control form-control-lg rw-input-error"
+                    className="form-control form-control-lg"
+                    placeholder="article-slug"
+                    defaultValue={post?.slug}
+                  />
+                  <FieldError name="slug" className="rw-field-error" />
+                </fieldset>
+
+                <fieldset className="form-group">
+                  <TextField
                     name="description"
                     validation={{ required: true }}
                     errorClassName="form-control form-control-lg rw-input-error"
